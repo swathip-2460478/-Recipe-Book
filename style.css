@@ -1,0 +1,96 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+    --bs-primary: #007bff;
+    --bs-primary-rgb: 0, 123, 255;
+    --font-family: 'Lato', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #f8f9fa; /* Light background */
+}
+
+/* --- Navigation --- */
+.navbar-brand {
+    font-weight: 700;
+}
+
+/* --- Recipe Card Styling --- */
+.recipe-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; /* Stronger hover shadow */
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.recipe-img {
+    height: 220px; 
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.recipe-card:hover .recipe-img {
+    transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+.cuisine-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.85rem;
+    padding: 0.4em 0.8em;
+    border-radius: 50rem;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.card-title {
+    font-weight: 700;
+    color: #343a40;
+}
+
+.card-text {
+    font-size: 0.9rem;
+}
+
+/* --- Details Page Styling --- */
+.detail-img {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.detail-section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e9ecef;
+}
+
+.list-group-item {
+    border-color: #f1f1f1;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    .col-md-4, .col-md-2 {
+        margin-bottom: 0.5rem;
+    }
+}
